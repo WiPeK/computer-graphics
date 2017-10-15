@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1508101491 source:e:\computer-graphics\tom\tom\main.cpp
+	<iostream>
+	<allegro.h>
+
