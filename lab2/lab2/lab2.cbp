@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="lab1" />
+		<Option title="lab2" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/lab1" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/lab2" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,13 +16,12 @@
 					<Add option="-g" />
 				</Compiler>
 				<Linker>
-					<Add library="E:/computer-graphics/allegro-mingw-4.2.2/lib/liballeg.a" />
-					<Add library="E:/computer-graphics/allegro-mingw-4.2.2/lib/liballeg_s.a" />
-					<Add directory="E:/computer-graphics/allegro-mingw-4.2.2/lib" />
+					<Add library="E:/Program Files (x86)/CodeBlocks/MinGW/lib/liballeg.a" />
+					<Add library="E:/Program Files (x86)/CodeBlocks/MinGW/lib/liballeg_s.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/lab1" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/lab2" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -43,7 +42,6 @@
 			<code_completion />
 			<envvars />
 			<debugger />
-			<lib_finder disable_auto="1" />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

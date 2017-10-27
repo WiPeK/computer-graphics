@@ -55,7 +55,7 @@ class Drawer {
         void _drawLineInXAxis(int x0, int x1, int y0) {
             float j = y0;
             for(int i = x0; i <= x1; i++) {
-                putpixel(screen, i, int(j + this->_step), makecol(255, 0, 0));
+                putpixel(screen, i, int(j + 0.5), makecol(255, 0, 0));
                 j += this->_m;
             }
         }
@@ -85,17 +85,21 @@ class Drawer {
         void _drawLineInYAxis(int x0, int y0, int y1) {
             float j = x0;
             for(int i = y0; i <= y1; i++) {
-                putpixel(screen, int(j + this->_step), i, makecol(255, 0, 0));
+                putpixel(screen, int(j + 0.5), i, makecol(255, 0, 0));
                 j += this->_m;
             }
         }
 
     public:
         void drawForA(int screenWidth, int screenHeight) {
-            for(int x = 0; x <= 8; x++){
+            for(int i = 0; i <= int(screenHeight / 100); i++) {
+                this->_drawLine(0, int(screenWidth/2), i + 100, int(screenHeight/2));
+            }
+
+            /*for(int x = 0; x <= 8; x++){
                 this->_drawLine(screenWidth / 8 * x, 0, screenWidth / 8 * x, screenHeight);
                 this->_drawLine(0, screenHeight / 8 * x, screenWidth, screenHeight / 8 * x);
-            }
+            }*/
         }
 
         void drawForB(int screenWidth, int screenHeight) {
@@ -138,9 +142,9 @@ class KeyboardController {
 
         void keyboardListener() {
             this->_drawer->setStep(0.5);
-            //while(1) {
-                //int pressedButton = readkey() & 0xff;
-                this->_drawer->drawForB(320, 200);
+            while(1) {
+                int pressedButton = readkey() & 0xff;
+                this->_drawer->drawForA(320, 320);
                 /*switch((char)pressedButton) {
                     case 'A':
                         this->_drawer->drawForA(320, 200);
@@ -161,7 +165,7 @@ class KeyboardController {
                         this->_drawer->drawForF();
                         break;
                 }*/
-            //}
+            }
 
         }
 
@@ -173,7 +177,7 @@ class KeyboardController {
 int main()
 {
     allegro_init();
-    if (set_gfx_mode(GFX_AUTODETECT_WINDOWED, 320, 200, 320, 200) != 0)
+    if (set_gfx_mode(GFX_AUTODETECT_WINDOWED, 320, 320, 320, 320) != 0)
     {
         allegro_message("Problem z ustawieniem trybu graficznego\n");
     }
