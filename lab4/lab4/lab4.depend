@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1509891047 source:e:\computer-graphics\lab4\lab4\main.cpp
+	<iostream>
+	<allegro.h>
+	<math.h>
+	<time.h>
+	<cstdlib>
+

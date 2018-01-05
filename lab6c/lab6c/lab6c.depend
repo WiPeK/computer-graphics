@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1510525400 source:e:\computer-graphics\lab6c\lab6c\main.cpp
+	<iostream>
+	<allegro.h>
+	<math.h>
+	<time.h>
+	<cstdlib>
+
